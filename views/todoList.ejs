@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TodoList</title>
+  <link rel="stylesheet" type="text/css" href="todoList.css" >
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="all">
+  <div class="upper">
+    <div class="registerAndLogin">
+      <a href="/" class="landing">Todo</a>
+      <div class="RL">
+        <% if (!auth) { %>
+      <div id="registerButtonDiv">
+        <a href="#" id="registerButton">註冊</a>
+      </div>
+      <div id="loginButtonDiv">
+        <a href="#" id="loginButton">登入</a>
+      </div>
+      <% } else { %>
+       <div id="logoutButtonDiv">
+        <a href="/user/logout" id="logoutButton">登出</a>
+      </div>
+      <% } %>
+      </div>
+
+    </div>
+    <h1 class="todoDescript">Todo List</h1>
+    <div class="todoInput">
+      <input type="text" class="text" placeholder="洗澡澡" autofocus>
+      <input type="submit" class="sendButton" value="✚">
+    </div>
+  </div>
+  <div class="background">
+
+    <div class="middle">
+
+      <ol class="todoList">
+        <% if(message) {%>
+          <h2> <%= message %> </h2>
+        <% } %>
+        <% for(var i=0 ; i<allTodo.length ; i++){ %>
+          <li class="todo" data-id="<%- allTodo[i]._id%>">
+            <input type="checkbox" name="complete" class="checkbox" id="<%- (i+1) %>"
+              <% if(allTodo[i].complete === true) { %>
+                checked
+              <% } else {}%>
+            ><span><%- allTodo[i].text %></span>
+
+<!--             <a href="#">
+              <img src="/img/edit_Icon.png" alt="edit" class="editPic">
+            </a> -->
+
+            <a href="#" class="del" >
+              <i class="fas fa-trash-alt garbage"></i>
+            </a>
+          </li>
+        <% } %>
+
+<!-- t -->
+<!--         <li class="todo">
+          <input class="checkbox" type="checkbox"> 洗澎澎
+          <a href="#" class="del">
+            <span >x</span>
+          </a>
+        </li> -->
+      </ol>
+    </div>
+  </div>
+
+<!-- register -->
+  <div id="registerPage" >
+    <div class="registerCenterRegion">
+      <div class="registerWord" >註冊</div>
+      <form action="/user/register" method="post">
+        <div class="line">
+          <input type="text" name="account" class="account AP" placeholder="帳號">
+        </div>
+        <div class="error_account_require"  id="account_require">
+          帳號必填!
+        </div>
+        <div class="line">
+          <input type="password" name="password" class="password AP" placeholder="密碼">
+        </div>
+        <div class="error_account_require" id="pwd_require">
+          密碼必填!
+        </div>
+        <div class="line">
+          <input type="password" name="passwordCheck" class="AP" id="passwordCheck" placeholder="再次輸入密碼">
+        </div>
+        <div class="line">
+          <input type="text" class="cancelRegister" value="取消">
+          <input type="submit" class="sendRegister" value="送出">
+        </div>
+      </form>
+    </div>
+  </div>
+
+<!-- 登入 -->
+   <div id="loginPage" >
+    <div class="registerCenterRegion">
+      <div class="loginWord" >登入</div>
+      <form action="/user/login" method="post">
+        <div class="line">
+          <input type="text" name="account" class="account AP" placeholder="帳號">
+        </div>
+        <div class="line">
+          <input type="password" name="password" class="password AP" placeholder="密碼">
+        </div>
+        <div class="line">
+          <input type="text" class="cancelLogin" value="取消">
+          <input type="submit" class="sendLogin" value="送出">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/lib/jquery-3.3.1.min.js"></script>
+<script src="js/lib/moment.js"></script>
+<script src="js/todo.js"></script>
+</body>
+</html>

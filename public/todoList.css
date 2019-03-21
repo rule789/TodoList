@@ -1,0 +1,208 @@
+body {
+  font-family: Microsoft JhengHei;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input, textarea, select{
+  font-family:inherit;
+  font-size:inherit;
+
+}
+
+.upper {
+  background-color:#D64A37;
+  text-align: center;
+  color: white;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+.registerAndLogin {
+  display: flex;
+  padding-top: 7px;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+#loginButton, #registerButton, #logoutButton, .landing {
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+
+#registerButtonDiv, #loginButtonDiv, #logoutButtonDiv {
+  padding: 5px 0;
+}
+
+#loginButton:hover, #registerButton:hover, #logoutButton:hover {
+  background-color: #FF5F49;
+}
+
+/*輸入todo*/
+.todoInput {
+  padding: 50px 0 ;
+}
+
+.text, .sendButton {
+  padding: 7px 14px;
+  font-size: 20px;
+
+  border: 1px solid lightgray;
+}
+
+.text {
+  width: 400px;
+  margin-left: 80px;
+  border-radius: 3px;
+}
+
+.sendButton {
+  border: 1px solid #FFDD55;
+  margin-left: 15px;
+  background-color: #FFDD55;
+  border-radius: 100%;
+  color: #444444;
+}
+
+.sendButton:hover {
+  border: 1px solid #FFAA33;
+  background-color: #FFAA33;
+}
+
+.middle {
+  margin: auto;
+  padding-top: 60px;
+}
+
+.error {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+}
+
+
+/*todo list*/
+.todoList {
+  padding-left: 600px;
+  padding-right: 600px;
+}
+
+.todo {
+  margin-bottom: 7px;
+  font-size: 17px
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.del {
+  font-weight: bold;
+  color: gray;
+  float: right;
+}
+
+.garbage {
+  width: 17px;
+  height: 17px;
+  vertical-align: bottom;
+}
+
+#registerPage, #loginPage {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  display: none;
+}
+
+
+.registerCenterRegion {
+  width: 500px;
+  height: 400px;
+  background: white;
+  border-radius: 5px;
+  justify-content: center;
+  margin: 90px auto;
+  padding: 50px;
+  box-sizing: border-box;
+
+}
+
+.registerWord, .loginWord {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+
+.line {
+  display: flex;
+  margin-bottom: 13px;
+  font-size: 20px;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.AP {
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  width: 100%;
+}
+
+.AP:focus {
+  outline: none;
+  border-bottom: 2px solid #0066FF;
+}
+
+.cancelRegister, .sendRegister, .sendLogin, .cancelLogin {
+  border: none;
+  background-color: #0066FF;
+  color: #fff;
+  width: 50%;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.cancelRegister, .cancelLogin {
+  margin-right: 10px;
+  cursor: default;
+}
+
+.cancelRegister:hover , .sendRegister:hover {
+  background-color: #009FCC;
+}
+
+
+.error_account_require {
+  position: relative;
+  color: red;
+  top: -50px;
+  right: -290px;
+  font-size: 18px;
+  display: none;
+}
+
+.RL {
+  display: flex;
+}
