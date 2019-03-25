@@ -36,11 +36,11 @@ function addTodo (e) {
     message: todoInput
     };
 
-  let url = window.location.host;
-  // console.log(url);
+  let url = window.location.origin;
+  console.log(url);
   // 'http://localhost:3000/newTodo'
   const xhr = new XMLHttpRequest();
-  xhr.open('post', `http://${url}/newTodo` , true);
+  xhr.open('post', `${url}/newTodo` , true);
   xhr.setRequestHeader('Content-type','application/json');
   xhr.send(JSON.stringify(newTodo));
   xhr.onload = function() {
