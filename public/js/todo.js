@@ -37,7 +37,7 @@ function addTodo (e) {
     };
 
   let url = window.location.origin;
-  console.log(url);
+  // console.log(url);
   // 'http://localhost:3000/newTodo'
   const xhr = new XMLHttpRequest();
   xhr.open('post', `${url}/newTodo` , true);
@@ -72,9 +72,10 @@ function delTodo(e) {
 
     const id = e.target.parentNode.parentNode.dataset.id;
     const data = {id}
+    let url = window.location.origin;
 
     var xhr = new XMLHttpRequest();
-    xhr.open('delete', 'http://localhost:3000/delTodo', true);
+    xhr.open('delete', `${url}/delTodo`, true);
     xhr.setRequestHeader('Content-type','application/json');
     // console.log(data);
     xhr.send(JSON.stringify(data));
