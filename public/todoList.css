@@ -8,8 +8,9 @@ a {
   text-decoration: none;
 }
 
-li {
+ol, li {
   list-style: none;
+  padding: 0;
 }
 
 input, textarea, select{
@@ -94,8 +95,8 @@ input, textarea, select{
 
 /*todo list*/
 .todoList {
-  padding-left: 600px;
-  padding-right: 600px;
+  margin: auto;
+  width: 200px;
 }
 
 .todo {
