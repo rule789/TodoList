@@ -58,13 +58,12 @@ input, textarea, select{
 .text, .sendButton {
   padding: 7px 14px;
   font-size: 20px;
-
   border: 1px solid lightgray;
 }
 
 .text {
   width: 400px;
-  margin-left: 80px;
+  margin-left: 5vw;
   border-radius: 3px;
 }
 
@@ -206,4 +205,14 @@ input, textarea, select{
 
 .RL {
   display: flex;
+}
+
+
+@media only screen and (max-width: 550px){
+  .text {
+    width: 65vw;
+  }
+  .registerCenterRegion {
+    width: 90vw;
+  }
 }
